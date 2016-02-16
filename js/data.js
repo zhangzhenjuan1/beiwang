@@ -178,15 +178,31 @@ $(function(){
 
     add.click(function(){
         if(flag) {
-            form.attr({"data-a":"animate-down"}).css("display","block");
+            form.css("display","block").fadeIn(2000);
+            // form.attr({"data-a":"animate-down"}).css("display","block");
             flag=false;
         }else{
-            form.attr({"data-a":"animate-up"});
+            form.fadeOut(800);
+            // form.attr({"data-a":"animate-up"});
             flag=true;
         }
     });
+    // form.hover(function(){
+    //     form.css({
+    //         webkitTransform:scale(1.1,1.1);
+    //         webkitTransition: all .5s ease
+    //     })
+    // },function(){
+    //     form.css({
+    //         webkitTransform:scale(1,1);
+    //         webkitTransition: all .5s ease
+
+    //     })
+    // })
     formClose.click(function(){
-        form.attr({"data-a":"animate-up"});
+        // form.attr({"data-a":"animate-up"});
+            form.fadeOut(800);
+
         flag=true;
     });
 
